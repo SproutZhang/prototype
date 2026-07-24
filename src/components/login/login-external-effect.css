@@ -1,0 +1,18 @@
+.login-external-effect {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.login-external-effect .magic-rings-container {
+  width: 100%;
+  height: 100%;
+}
+
+.login-external-effect canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
