@@ -1,0 +1,28 @@
+# Dependencies
+node_modules/
+
+# Build
+dist/
+.next/
+out/
+build/
+
+# Env / secrets
+.env
+.env.*
+!.env.example
+*.local.backup
+
+# Logs / temp
+*.log
+.tmp*
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/*
+!.vscode/extensions.json
+.idea/
+
+# TypeScript
+*.tsbuildinfo

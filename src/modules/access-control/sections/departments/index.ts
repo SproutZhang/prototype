@@ -1,0 +1,1 @@
+export { AccessControlDepartmentsPage } from './AccessControlDepartmentsPage'

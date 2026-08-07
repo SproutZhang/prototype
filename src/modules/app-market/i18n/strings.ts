@@ -1,0 +1,266 @@
+import type { AppLocale } from '../../../i18n/homeStrings'
+import type { AppMarketProductLine } from '../shared/types'
+
+const STRINGS = {
+  zh: {
+    pageTitle: '应用市场',
+    pageSubtitle: '浏览 Agents 模板库、场景模板库、Tools 与 Skills 模板库，一键安装到工作区',
+    sectionAgentTemplates: 'Agents 模板库',
+    sectionAgentTemplatesDesc: '可安装的 Agent 与工作流模板，快速搭建入职等场景',
+    sectionScenarioTemplates: '场景模板库',
+    sectionScenarioTemplatesDesc: '开箱即用的业务场景模板，快速创建并配置自动化流程',
+    sectionTools: '工具库',
+    sectionToolsDesc: '连接器、节点与自动化工具，扩展编排能力',
+    sectionSkills: '技能模板库',
+    sectionSkillsDesc: '可复用的 Agent 技能模板，为子代理与工作流步骤提供领域能力与话术',
+    viewMore: '查看更多',
+    viewMoreAria: '查看该分类下的全部产品',
+    backToMarket: '返回应用市场',
+    searchPlaceholder: '搜索产品、发布者或关键词…',
+    homeFilterLabel: '品类筛选',
+    homeFilterAll: '全部',
+    homeFilterAgents: 'Agents',
+    homeFilterScenarios: '场景模板',
+    homeFilterTools: 'Tools',
+    homeFilterSkills: 'Skills',
+    viewToggle: '切换应用市场展示方式',
+    listView: '列表视图',
+    cardsView: '卡片视图',
+    install: '安装',
+    installed: '已安装',
+    featured: '精选',
+    new: '上新',
+    emptyTitle: '未找到匹配产品',
+    emptyHint: '尝试调整搜索关键词',
+    rating: '评分',
+    installs: '安装量',
+    publisher: '发布者',
+    productLine: '品类',
+    productLineAgentTemplates: 'Agents 模板库',
+    productLineScenarioTemplates: '场景模板库',
+    productLineTools: '工具库',
+    productLineSkills: '技能模板库',
+    detailClose: '关闭详情',
+    productCount: '共 {count} 个产品',
+    browseByCategory: '按类别浏览',
+    categoryAll: '全部',
+    collapseCategoryFilter: '折叠类别筛选',
+    expandCategoryFilter: '展开类别筛选',
+    resultCount: '共显示 {count} 条结果',
+    subAgents: '子Agent',
+    subAgentCountBadge: '{count} 个子代理',
+    pluginTools: '使用的插件工具',
+    pluginsUsed: '使用的插件',
+    pluginToolsEmpty: '暂无关联插件工具',
+    modalClose: '关闭',
+    useTemplate: '使用这个模板',
+    useTemplateCreating: '正在创建模板…',
+    useTemplateAgain: '再次使用',
+    useTemplateSuccessTitle: '创建成功',
+    useTemplateSuccessSub: '模板已创建成功，可在工作区中继续配置（演示）。',
+    installPreparing: '加载中…',
+    connectAccounts: '连接账户',
+    noConnectedAccounts: '暂无已连接账户。',
+    addAccount: '添加',
+    toolActionsPanel: '工具动作',
+    connectToolTitle: '连接 {tool}',
+    connectToolSubtitle: '连接 {tool} 到你的账户。',
+    connectCredentialName: '凭证名称',
+    connectCredentialPlaceholder: '请输入该凭证的名称',
+    connectAction: '连接',
+    verificationTitle: '输入验证码',
+    verificationSubtitle: '请输入 6 位验证码以完成账户连接。',
+    verificationPlaceholder: '请输入 6 位验证码',
+    verificationConfirm: '确认',
+    verificationCancel: '取消',
+    scenarioWorkflow: '工作流程',
+    createTemplate: '导入模板',
+    createTemplateTitle: '导入模板',
+    createTemplateSubtitle: '选择导入类型并上传模板文件。',
+    importTypeLabel: '选择导入类型',
+    importTypePlaceholder: '请选择导入类型',
+    importTypeAgent: '导入agent模板',
+    importTypeScenario: '导入场景模板',
+    importTypeTool: '导入工具模板',
+    importTypeSkill: '导入技能模板',
+    uploadFileLabel: '文件上传',
+    uploadDropTitle: '拖拽文件到此处上传',
+    uploadDropHint: '支持直接拖拽文件到上传区域',
+    uploadDropHintJson: '仅支持上传 JSON 格式文件，支持直接拖拽文件到上传区域',
+    uploadDropHintSkill: '仅支持上传 ZIP 或 MD 格式文件，支持直接拖拽文件到上传区域',
+    uploadDropHintSelectType: '请先选择导入类型',
+    importFileErrorTypeRequired: '请先选择导入类型',
+    importFileErrorInvalidJsonExtension: '仅支持上传 JSON 格式文件',
+    importFileErrorInvalidJsonContent: '文件内容不是有效的 JSON 格式',
+    importFileErrorInvalidSkillExtension: '仅支持上传 ZIP 或 MD 格式文件',
+    chooseFile: '选择文件',
+    selectedFileLabel: '已选择文件：{name}',
+    createTemplateConfirm: '导入',
+    createTemplateCancel: '取消',
+    importSuccessTitleAgent: 'Agent 模板导入成功',
+    importSuccessSubAgent: '模板已添加到 Agents 模板库。',
+    importSuccessTitleScenario: '场景模板导入成功',
+    importSuccessSubScenario: '模板已添加到场景模板库。',
+    importSuccessTitleTool: '工具模板导入成功',
+    importSuccessSubTool: '模板已添加到 Tools。',
+    importSuccessTitleSkill: '技能模板导入成功',
+    importSuccessSubSkill: '模板已添加到 Skills 模板库。',
+  },
+  en: {
+    pageTitle: 'App Marketplace',
+    pageSubtitle: 'Browse Agent templates, scenario templates, Tools, and Skills templates for your workspace',
+    sectionAgentTemplates: 'Agent Templates',
+    sectionAgentTemplatesDesc: 'Installable agent and workflow templates for onboarding and more',
+    sectionScenarioTemplates: 'Scenario Templates',
+    sectionScenarioTemplatesDesc: 'Ready-to-use business scenario templates for fast workflow setup',
+    sectionTools: 'Tools',
+    sectionToolsDesc: 'Connectors, steps, and automation tools to extend your workflows',
+    sectionSkills: 'Skills Templates',
+    sectionSkillsDesc: 'Reusable agent skill templates with domain know-how for sub-agents and workflow steps',
+    viewMore: 'View more',
+    viewMoreAria: 'View all products in this category',
+    backToMarket: 'Back to marketplace',
+    searchPlaceholder: 'Search products, publishers, or keywords…',
+    homeFilterLabel: 'Category filter',
+    homeFilterAll: 'All',
+    homeFilterAgents: 'Agents',
+    homeFilterScenarios: 'Scenarios',
+    homeFilterTools: 'Tools',
+    homeFilterSkills: 'Skills',
+    viewToggle: 'Switch marketplace view',
+    listView: 'List view',
+    cardsView: 'Card view',
+    install: 'Install',
+    installed: 'Installed',
+    featured: 'Featured',
+    new: 'New',
+    emptyTitle: 'No matching products',
+    emptyHint: 'Try adjusting your search keywords',
+    rating: 'Rating',
+    installs: 'Installs',
+    publisher: 'Publisher',
+    productLine: 'Category',
+    productLineAgentTemplates: 'Agent Templates',
+    productLineScenarioTemplates: 'Scenario Templates',
+    productLineTools: 'Tools',
+    productLineSkills: 'Skills Templates',
+    detailClose: 'Close details',
+    productCount: '{count} products',
+    browseByCategory: 'Browse by category',
+    categoryAll: 'All',
+    collapseCategoryFilter: 'Collapse category filter',
+    expandCategoryFilter: 'Expand category filter',
+    resultCount: 'Showing {count} results',
+    subAgents: 'Sub-agents',
+    subAgentCountBadge: '{count} sub-agents',
+    pluginTools: 'Plugin tools',
+    pluginsUsed: 'Plugins used',
+    pluginToolsEmpty: 'No plugin tools linked',
+    modalClose: 'Close',
+    useTemplate: 'Use this template',
+    useTemplateCreating: 'Creating template…',
+    useTemplateAgain: 'Use again',
+    useTemplateSuccessTitle: 'Created successfully',
+    useTemplateSuccessSub: 'The template was created and added to your workspace (demo).',
+    installPreparing: 'Loading…',
+    connectAccounts: 'Connected Accounts',
+    noConnectedAccounts: 'No connected accounts found.',
+    addAccount: 'Add',
+    toolActionsPanel: 'Tool Actions',
+    connectToolTitle: 'Connect {tool}',
+    connectToolSubtitle: 'Connect {tool} to your account.',
+    connectCredentialName: 'Credential Name',
+    connectCredentialPlaceholder: 'Enter a name for this credential',
+    connectAction: 'Connect',
+    verificationTitle: 'Enter Verification Code',
+    verificationSubtitle: 'Enter the 6-digit verification code to finish connecting this account.',
+    verificationPlaceholder: 'Enter 6-digit code',
+    verificationConfirm: 'Confirm',
+    verificationCancel: 'Cancel',
+    scenarioWorkflow: 'Workflow',
+    createTemplate: 'Import Template',
+    createTemplateTitle: 'Import Template',
+    createTemplateSubtitle: 'Choose the import type and upload a template file.',
+    importTypeLabel: 'Import Type',
+    importTypePlaceholder: 'Select an import type',
+    importTypeAgent: 'Import agent template',
+    importTypeScenario: 'Import scenario template',
+    importTypeTool: 'Import tool template',
+    importTypeSkill: 'Import skill template',
+    uploadFileLabel: 'File Upload',
+    uploadDropTitle: 'Drag files to upload',
+    uploadDropHint: 'You can also drag a file into the upload area',
+    uploadDropHintJson: 'Only JSON files are supported. You can also drag a file into the upload area',
+    uploadDropHintSkill: 'Only ZIP or MD files are supported. You can also drag a file into the upload area',
+    uploadDropHintSelectType: 'Select an import type first',
+    importFileErrorTypeRequired: 'Select an import type first',
+    importFileErrorInvalidJsonExtension: 'Only JSON files are supported',
+    importFileErrorInvalidJsonContent: 'The file is not valid JSON',
+    importFileErrorInvalidSkillExtension: 'Only ZIP or MD files are supported',
+    chooseFile: 'Choose File',
+    selectedFileLabel: 'Selected file: {name}',
+    createTemplateConfirm: 'Import',
+    createTemplateCancel: 'Cancel',
+    importSuccessTitleAgent: 'Agent template imported',
+    importSuccessSubAgent: 'The template has been added to Agent Templates.',
+    importSuccessTitleScenario: 'Scenario template imported',
+    importSuccessSubScenario: 'The template has been added to Scenario Templates.',
+    importSuccessTitleTool: 'Tool template imported',
+    importSuccessSubTool: 'The template has been added to Tools.',
+    importSuccessTitleSkill: 'Skill template imported',
+    importSuccessSubSkill: 'The template has been added to Skills Templates.',
+  },
+} as const
+
+export type AppMarketStringKey = keyof (typeof STRINGS)['zh']
+
+export function appMarketT(locale: AppLocale, key: AppMarketStringKey, vars?: Record<string, string | number>): string {
+  let text = STRINGS[locale][key]
+  if (vars) {
+    for (const [k, v] of Object.entries(vars)) {
+      text = text.replaceAll(`{${k}}`, String(v))
+    }
+  }
+  return text
+}
+
+const PRODUCT_LINE_LABEL_KEYS = {
+  'agent-templates': 'productLineAgentTemplates',
+  'scenario-templates': 'productLineScenarioTemplates',
+  tools: 'productLineTools',
+  skills: 'productLineSkills',
+} as const satisfies Record<AppMarketProductLine, AppMarketStringKey>
+
+const PRODUCT_LINE_DESC_KEYS = {
+  'agent-templates': 'sectionAgentTemplatesDesc',
+  'scenario-templates': 'sectionScenarioTemplatesDesc',
+  tools: 'sectionToolsDesc',
+  skills: 'sectionSkillsDesc',
+} as const satisfies Record<AppMarketProductLine, AppMarketStringKey>
+
+export function appMarketProductLineLabel(locale: AppLocale, line: AppMarketProductLine): string {
+  return appMarketT(locale, PRODUCT_LINE_LABEL_KEYS[line])
+}
+
+export function appMarketProductLineTitle(locale: AppLocale, line: AppMarketProductLine): string {
+  return appMarketProductLineLabel(locale, line)
+}
+
+export function appMarketProductLineDesc(locale: AppLocale, line: AppMarketProductLine): string {
+  return appMarketT(locale, PRODUCT_LINE_DESC_KEYS[line])
+}
+
+export function appMarketProductCountLabel(locale: AppLocale, count: number): string {
+  const template = STRINGS[locale].productCount
+  return template.replace('{count}', String(count))
+}
+
+export function appMarketResultCountLabel(locale: AppLocale, count: number): string {
+  const template = STRINGS[locale].resultCount
+  return template.replace('{count}', String(count))
+}
+
+export function appMarketSubAgentCountBadge(locale: AppLocale, count: number): string {
+  const template = STRINGS[locale].subAgentCountBadge
+  return template.replace('{count}', String(count))
+}

@@ -1,0 +1,1 @@
+export { AccessControlWorkspacePage } from './AccessControlWorkspacePage'

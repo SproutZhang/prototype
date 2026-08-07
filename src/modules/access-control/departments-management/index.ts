@@ -1,0 +1,5 @@
+export { DepartmentsManagementView } from './components/DepartmentsManagementView'
+export { DepartmentsPanel } from './components/DepartmentsPanel'
+export { useDepartmentsSectionController } from './hooks/useDepartmentsSectionController'
+export type { DepartmentEditSavePayload, DepartmentFormSavePayload } from './hooks/useDepartmentsSectionController'
+export { ORG_DEPARTMENT_ROWS, type OrgDepartmentRow } from './data/departmentsSeed'
